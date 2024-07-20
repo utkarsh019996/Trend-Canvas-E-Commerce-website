@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trend Canvas</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.2.0/remixicon.css"> 
+
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h3>Trend Canvas</h3>
+            <nav id="nav">
+                <div class="close" onclick="closeNav()"><i class="ri-close-line"></i></div>
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">Shop</a></li>
+                    <li><a href="#">Trending</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+        <div class="menu" onclick="openNav()"><i class="ri-menu-line"></i></div>
+    </header>
+    <div class="hero">
+        <div class="container">
+            <h1>Welcome to Our Shop</h1>
+            <p>Find the best deals on your favourite products.</p>
+
+            <a href="#" class="btn">Shop Now</a>
+        </div>
+    </div>
+
+    <div class="featured-products">
+        <div class="container">
+            <h1>Featured Products</h1>
+            <div class="product-grid">
+                <div class="product">
+                    <img src="m1.png" alt="">
+                    <h3>Long Tshirt</h3>
+                    <p>₹2000</p>
+                </div>
+                <div class="product">
+                    <img src="m2.png" alt="">
+                    <h3>Tshirt</h3>
+                    <p>₹2000</p>
+                </div>
+                <div class="product">
+                    <img src="m3.png" alt="">
+                    <h3>Ethnic Suit</h3>
+                    <p>₹2000</p>
+                </div>
+                <div class="product">
+                    <img src="m4.png" alt="">
+                    <h3>Ethnic Suit</h3>
+                    <p>₹2000</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 @ Web Code Journey. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="gsap.min.js"></script>
+
+    <script>
+
+        function openNav() {
+            document.getElementById("nav").style.right = "0";
+        }
+
+        function closeNav() {
+            document.getElementById("nav").style.right = "-150px";
+        }
+
+        gsap.from('.hero' ,1.2, {opacity: 0, x: 500, delay: .8})
+        gsap.from('header' ,1.2, {opacity: 0, y: -200, delay: 1.8})
+        gsap.from('.featured-products' ,1.2, {opacity: 0, x: -500, delay: 1.4})
+        gsap.from('footer' ,1.2, {opacity: 0, y: 100, delay: 4})
+
+
+      
+    </script>
+</body>
+</html>
